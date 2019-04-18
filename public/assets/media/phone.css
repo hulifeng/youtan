@@ -1,0 +1,19 @@
+.copyright {
+    display: none;
+}
+.domain {
+    display: block;
+    text-align: center;
+}
+#content .blog-content .blog-article .blog-article-child .article-content {
+    padding-left: 0;
+}
+#content .blog-content .blog-article .blog-article-child .blog-article-child-img {
+    display: none;
+}
+#content .blog-site {
+    display: none;
+}
+#content .blog-detail .blog-detail-summary .text {
+    display: none;
+}
