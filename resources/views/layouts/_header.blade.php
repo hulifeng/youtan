@@ -22,8 +22,8 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-plus"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fa fa-plus"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
             </ul>
         </div>
     </div>
