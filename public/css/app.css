@@ -16769,27 +16769,27 @@ h6 {
 
 /* blog-site */
 
-#content .blog-site {
+.blog-site {
   background-color: #fff;
   padding: 40px 0;
   margin-top: 40px;
 }
 
-#content .blog-site dt {
+.blog-site dt {
   font-size: 15px;
   margin-bottom: 20px;
   color: #1c1f21;
 }
 
-#content .blog-site dd {
+.blog-site dd {
   margin-bottom: 10px;
 }
 
-#content .blog-site dd a {
+.blog-site dd a {
   color: #9199a1;
 }
 
-#content .blog-site dd a:hover {
+.blog-site dd a:hover {
   color: #1ab394;
 }
 
@@ -16813,4 +16813,13 @@ h6 {
 }
 
 /* footer end */
+
+/* captcha image */
+
+.register-page img.captcha {
+  cursor: pointer;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 3px;
+}
 
