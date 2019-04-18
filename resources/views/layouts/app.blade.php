@@ -26,7 +26,7 @@
 
         </div>
 
-        <div id="content">
+        <div id="content" style="margin-top: 30px;">
 
             <div class="container" style="max-width: 1000px;">
 
