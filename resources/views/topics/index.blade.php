@@ -30,20 +30,6 @@
                     </div>
                     <!-- 轮播结束 -->
 
-                    {{-- 分类开始 --}}
-                    <div class="blog-category-new clearfix">
-                        <div class="category-item {{ active_class(if_route('topics.index')) }}">
-                            <i class="fa fa-th-large"></i> <a href="{{ route('topics.index')  }}">全部分类</a>
-                        </div>
-                        <?php $categories = app(\App\Models\Category::class)->categories(); ?>
-                        @foreach($categories as $category)
-                            <div class="category-item {{ active_class(if_route('categories.show') && if_route_param('category', $category->id)) }}">
-                                <a href="{{ route('categories.show', $category->id) }}">{{ $category->name }}</a>
-                            </div>
-                        @endforeach
-                    </div>
-                    {{-- 分类结束 --}}
-
                     {{-- 文章开始 --}}
                     <div class="blog-article clearfix">
                         {{-- 文章列表 --}}

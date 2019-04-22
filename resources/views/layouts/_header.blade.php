@@ -11,12 +11,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">首页</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">发现</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">文章</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">每日精进</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">分类</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">话题</a></li>
+                <li class="nav-item {{ active_class(if_route('topics.index')) }}"><a class="nav-link" href="{{ route('topics.index') }}">首页</a></li>
+                @foreach($categories as $category)
+                    <li class="nav-item {{ active_class(if_route('categories.show') && if_route_param('$category', $category->id)) }}"><a class="nav-link" href="{{ route('categories.show', $category->id) }}">{{ $category->name }}</a></li>
+                @endforeach
             </ul>
 
             <!-- Right Side Of Navbar -->
