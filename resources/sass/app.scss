@@ -79,6 +79,16 @@ body {
     background-color: #fff;
     display: inline-block;
     margin-right: 10px;
+    a {
+      text-decoration: none;
+      color: #9199a1;
+    }
+  }
+  .category-item.active {
+    background-color: rgba(255,170,0,.1);
+    i, a {
+      color: #fa0;
+    }
   }
 }
 

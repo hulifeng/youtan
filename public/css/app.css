@@ -16497,6 +16497,7 @@ h6 {
 }
 
 #content {
+  margin-top: 30px;
   padding-bottom: 40px;
 }
 
@@ -16513,6 +16514,20 @@ h6 {
   background-color: #fff;
   display: inline-block;
   margin-right: 10px;
+}
+
+#content .blog-content .blog-category-new .category-item a {
+  text-decoration: none;
+  color: #9199a1;
+}
+
+#content .blog-content .blog-category-new .category-item.active {
+  background-color: rgba(255, 170, 0, 0.1);
+}
+
+#content .blog-content .blog-category-new .category-item.active i,
+#content .blog-content .blog-category-new .category-item.active a {
+  color: #fa0;
 }
 
 /* blog-article */

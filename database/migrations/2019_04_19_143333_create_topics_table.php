@@ -17,6 +17,7 @@ class CreateTopicsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('content');
+            $table->string('cover');
             $table->longText('markdown_content');
             $table->unsignedInteger('user_id')->index();
             $table->unsignedInteger('category_id')->index();
