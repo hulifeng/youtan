@@ -10,3 +10,14 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 // 话题
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::group(['namespace' => 'Smartmd', 'prefix' => 'editor'], function () {
+    Route::post('/upload', 'UploadController@imSave');
+    Route::get('/write', function () {
+        return view('vendor/smartmd/write');
+    });
+    Route::get('/php-show','ParseController@index');
+    Route::get('/js-show',function(){
+        return view('vendor/smartmd/js-show');
+    });
+});

@@ -16486,10 +16486,18 @@ h6 {
 }
 
 #header {
-  height: 50px;
   box-sizing: border-box;
   background-color: #fff;
   margin-bottom: 20px;
+  box-shadow: 0 1px 11px 2px rgba(42, 42, 42, 0.1);
+}
+
+.navbar {
+  padding: 0;
+}
+
+.smartmd {
+  z-index: 999;
 }
 
 .nav-blog .navbar-nav li a {
@@ -16537,6 +16545,8 @@ h6 {
   margin-bottom: 20px;
   margin-top: 20px;
   background-color: #fff;
+  /* order */
+  /* order end */
 }
 
 #content .blog-content .blog-article .order {
@@ -16624,6 +16634,25 @@ h6 {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+/* blog-write */
+
+#content .blog-write {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#content .blog-write .blog-write-title {
+  margin-bottom: 20px;
+}
+
+#content .blog-write .blog-write-title i,
+#content .blog-write .blog-write-title strong {
+  color: #676a6c;
+}
+
+/* blog-write end */
 
 /* blog-article end */
 
