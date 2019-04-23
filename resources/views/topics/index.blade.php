@@ -32,6 +32,9 @@
 
                     {{-- 文章开始 --}}
                     <div class="blog-article clearfix">
+                        <div class="order">
+                            <a class="new {{ active_class(! if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=default">最新回复</a> | <a class="reply {{ active_class(if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=recent">最新发布</a>
+                        </div>
                         {{-- 文章列表 --}}
                         @include('topics._topic_list')
 

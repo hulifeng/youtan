@@ -96,7 +96,26 @@ body {
 #content .blog-content .blog-article {
   display: block;
   margin-bottom: 20px;
+  margin-top: 20px;
   background-color: #fff;
+  .order {
+    padding: 10px 20px;
+    border-bottom: 1px solid #e7eaec;
+    a {
+      text-decoration: none;
+      color: #9199a1;
+    }
+    .new {
+      display: inline-block;
+    }
+    .reply {
+      display: inline-block;
+    }
+    .active {
+      color: #1b1e21;
+      font-weight: 700;
+    }
+  }
   .blog-article-child {
     display: flex;
     padding: 20px;
@@ -272,7 +291,7 @@ body {
         padding: 0 5px;
         border: 1px solid #f0f0f0;
         border-radius: 3px;
-        font-size: 12px;
+        font-size: 13px;
         background-color: #ffc81f;
         color: #000;
         transition: background .2s;

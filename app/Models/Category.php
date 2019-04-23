@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
@@ -11,7 +12,7 @@ class Category extends Model
     public function categories()
     {
         if (is_null(cache('categories'))) {
-            cache(['categories' => $this->all()], 480);
+            cache(['categories' => $this->all()], Carbon::now()->addMinutes(10));
         }
 
         return cache('categories');
