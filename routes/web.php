@@ -21,3 +21,5 @@ Route::group(['namespace' => 'Smartmd', 'prefix' => 'editor'], function () {
         return view('vendor/smartmd/js-show');
     });
 });
+
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');

@@ -8,7 +8,7 @@
             </a>
             <div class="item">
                 <div class="info d-flex">
-                    <a href="javascript:;" class="item-title mr-auto">{{$topic->title}}</a>
+                    <a href="{{ route('topics.show', $topic->id) }}" class="item-title mr-auto">{{$topic->title}}</a>
                     <a href="{{ route('categories.show', $topic->category_id) }}" class="item-category">{{$topic->category->name}}</a>
                 </div>
                 <div class="data" style="overflow : hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{!! strip_tags($topic->content) !!}</div>

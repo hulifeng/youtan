@@ -57,12 +57,17 @@
             },
             isPreviewActive: true,
             uploads: {
+                url: "{{ route('topics.upload_image') }}",
                 type: ['jpeg', 'png', 'bmp', 'gif', 'jpg'],
                 maxSize: 4096,
                 typeError: 'Image support format {type}.',
                 sizeError: 'Image size is more than {maxSize} kb.',
                 serverError: 'Upload failed on {msg}'
             }
+        });
+
+        document.addEventListener('paste', function (event) {
+            console.log(event)
         });
     </script>
 @endsection
