@@ -46,7 +46,6 @@
                         <a href="#"><i class="fa fa-thumbs-up"></i> 点赞（12）</a>
                     </div>
                 </div>
-
                 <!-- 内容结束 -->
                 <div class="clearfix"></div>
 

@@ -200,10 +200,17 @@ body {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
-  .blog-write-title {
-    margin-bottom: 20px;
-    i, strong {
-      color: #676a6c;
+  .categories {
+    .category-item {
+      display: inline-block;
+      padding: 0.4em 1.2em;
+      background-color: #f6f8f9;
+      color: #9A9A9A;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -663,5 +670,15 @@ body {
     border: 1px solid #ced4da;
     border-radius: 4px;
     padding: 3px;
+  }
+}
+
+
+/* 编辑器样式 */
+.blog-detail-content {
+  ul {
+    padding-left: 2em;
+    padding: 10px 20px 10px 30px;
+    color: #7d8688;
   }
 }

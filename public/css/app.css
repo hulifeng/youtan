@@ -16650,13 +16650,17 @@ h6 {
   margin-bottom: 20px;
 }
 
-#content .blog-write .blog-write-title {
-  margin-bottom: 20px;
+#content .blog-write .categories .category-item {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+  background-color: #f6f8f9;
+  color: #9A9A9A;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-#content .blog-write .blog-write-title i,
-#content .blog-write .blog-write-title strong {
-  color: #676a6c;
+#content .blog-write .categories .category-item:last-child {
+  margin-right: 0;
 }
 
 /* blog-write end */
@@ -17206,5 +17210,13 @@ h6 {
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 3px;
+}
+
+/* 编辑器样式 */
+
+.blog-detail-content ul {
+  padding-left: 2em;
+  padding: 10px 20px 10px 30px;
+  color: #7d8688;
 }
 
