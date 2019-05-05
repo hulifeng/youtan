@@ -16663,6 +16663,10 @@ h6 {
   margin-right: 0;
 }
 
+#content .blog-write .categories .category-item.active {
+  color: #1ab394;
+}
+
 /* blog-write end */
 
 /* detail start */
