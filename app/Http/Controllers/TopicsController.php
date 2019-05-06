@@ -8,6 +8,7 @@ use App\Http\Requests\TopicRequest;
 use Illuminate\Http\Request;
 use Auth;
 use NoisyWinds\Smartmd\Markdown;
+use App\Models\Tag;
 
 class TopicsController extends Controller
 {
@@ -40,11 +41,30 @@ class TopicsController extends Controller
         $parse = new Markdown();
         $content = $parse->text($request->markdown_content);
 
-        $topic->fill($request->all());
+        $topic->title = $request->title;
+        $topic->excerpt = $request->excerpt;
+        $topic->category_id = $request->category_id;
+        $topic->markdown_content = $request->markdown_content;
         $topic->user_id = Auth::id();
         $topic->content = $content;
         $topic->cover = '/images/default.png';
         $topic->save();
+
+        // 先清空文章对应的标签
+        $topic->tags()->detach();
+        // 遍历标签，如果标签存在则添加关联，如果标签不存在先创建再添加关联
+        $tags = explode(',', $request->tags);
+        for ($i = 0; $i < sizeof($tags); $i++) {
+            $tag = Tag::where("name", $tags[$i])->first();
+            if ($tag) {
+                $topic->tags()->attach($tag->id);
+            } else {
+                $tag = new Tag;
+                $tag->name = $tags[$i];
+                $tag->save();
+                $topic->tags()->attach($tag->id);
+            }
+        }
 
         return redirect()->route('topics.index')->with('success', '文章创建成功！');
     }
@@ -57,5 +77,10 @@ class TopicsController extends Controller
     public function destroy()
     {
 
+    }
+
+    public function uploadImage()
+    {
+        dd(11);
     }
 }

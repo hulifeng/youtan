@@ -91,7 +91,7 @@
             highlight:true,
             isPreviewActive: true,
             uploads: {
-                url: "{{ route('topics.upload_image') }}",
+                url: "./upload",
                 type: ['jpeg', 'png', 'bmp', 'gif', 'jpg'],
                 maxSize: 4096,
                 typeError: 'Image support format {type}.',

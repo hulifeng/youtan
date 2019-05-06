@@ -31,7 +31,7 @@ class Topic extends Model
         }
 
         // 预防 N + 1 问题
-        return $query->with('user', 'category');
+        return $query->with('user', 'category', 'tags');
     }
 
     public function scopeRecent($query)
@@ -43,5 +43,15 @@ class Topic extends Model
     public function scopeRecentReplied($query)
     {
         return $query->orderBy('updated_at', 'desc');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 }

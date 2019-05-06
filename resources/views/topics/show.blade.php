@@ -17,12 +17,13 @@
                         <img src="/images/original.png" alt="原创" title="原创">
                     </div>
                     <!--标签-->
-                    <div class="blog-tag">
-                        <div class="item">分享</div>
-                        <div class="item">C++</div>
-                        <div class="item">PHP</div>
-                        <div class="item">Java</div>
-                    </div>
+                    @if($topic->tags)
+                        <div class="blog-tag">
+                            @foreach($topic->tags as $tag)
+                                <div class="item">{{ $tag->name }}</div>
+                            @endforeach
+                        </div>
+                    @endif
                     <div class="blog-detail-title">{{ $topic->title }}</div>
                     <!--摘要信息-->
                     <div class="blog-detail-summary">
