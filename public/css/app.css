@@ -16818,32 +16818,15 @@ h6 {
   font-weight: 700;
 }
 
+#content .blog-message .blog-message-area textarea {
+  padding: 10px;
+}
+
 #content .blog-message .blog-message-area .message {
   width: 100%;
   resize: none;
   border: 1px solid #e7eaec;
   margin-bottom: 10px;
-}
-
-#content .blog-message .blog-message-area .author-info {
-  display: flex;
-}
-
-#content .blog-message .blog-message-area .author-info .item {
-  flex: 1;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-#content .blog-message .blog-message-area .author-info .item:last-child {
-  margin-right: 0;
-}
-
-#content .blog-message .blog-message-area .author-info .item input {
-  width: 100%;
-  border: 1px solid #e7eaec;
-  padding-left: 10px;
-  height: 34px;
 }
 
 #content .blog-message .blog-message-area button {
@@ -16898,6 +16881,7 @@ h6 {
 
 #content .blog-message-new .item .info .time {
   display: inline-block;
+  padding: 0.375rem 0;
 }
 
 #content .parting {
@@ -17222,5 +17206,24 @@ h6 {
   padding-left: 2em;
   padding: 10px 20px 10px 30px;
   color: #7d8688;
+}
+
+/* 消息通知 */
+
+.notification-badge .badge {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.notification-badge .badge-secondary {
+  background-color: #EBE8E8;
+}
+
+.notification-badge .badge-hint {
+  background-color: #d15b47 !important;
+}
+
+.notification-list .media {
+  padding: 10px;
 }
 

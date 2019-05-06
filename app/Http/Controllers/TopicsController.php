@@ -41,10 +41,10 @@ class TopicsController extends Controller
         $parse = new Markdown();
         $content = $parse->text($request->markdown_content);
 
-        $topic->title = $request->title;
-        $topic->excerpt = $request->excerpt;
-        $topic->category_id = $request->category_id;
-        $topic->markdown_content = $request->markdown_content;
+        $topic->title = $request->input('title');
+        $topic->excerpt = $request->input('excerpt');
+        $topic->category_id = $request->input('category_id');
+        $topic->markdown_content = $request->input('markdown_content');
         $topic->user_id = Auth::id();
         $topic->content = $content;
         $topic->cover = '/images/default.png';

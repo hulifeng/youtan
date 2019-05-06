@@ -11,6 +11,9 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 // 话题
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
+// 回复
+Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+
 Route::group(['namespace' => 'Smartmd', 'prefix' => 'editor'], function () {
     Route::post('/upload', 'UploadController@imSave');
     Route::get('/write', function () {
@@ -23,3 +26,6 @@ Route::group(['namespace' => 'Smartmd', 'prefix' => 'editor'], function () {
 });
 
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+
+// 通知
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);

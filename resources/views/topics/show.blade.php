@@ -60,19 +60,20 @@
 
                 <!--留言-->
                 <div class="blog-message">
-                    <div class="blog-message-area">
+                    <div class="blog-message-area clearfix">
                         <div class="message-title">留言</div>
-                        <textarea name="message" id="message" class="message" cols="30" rows="5"></textarea>
-                        <div class="author-info">
-                            <div class="item"><input type="text" name="username" placeholder="昵称"></div>
-                            <div class="item"><input type="text" name="email" placeholder="邮箱"></div>
-                            <div class="item"><input type="text" name="site" placeholder="网站"></div>
-                        </div>
-                        <button class="btn bg-green btn-block">提交</button>
+                        @include('shared._error')
+                        <form action="{{ route('replies.store') }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="topic_id" value="{{ $topic->id }}">
+                            <textarea name="content" id="message" class="message" cols="30" rows="5"></textarea>
+                            <button class="btn bg-green float-right"><i class="fas fa-comment-dots"></i> 提交</button>
+                        </form>
                     </div>
                 </div>
                 <!--留言结束-->
 
+                @if(count($topic->replies))
                 <!--分割线-->
                 <div class="parting">
                     <span class="line"></span>
@@ -84,6 +85,7 @@
                 <!--留言新-->
                 @include('topics._reply_list')
                 <!--留言新结束-->
+                @endif
 
                 <!--分割线-->
                 <div class="parting">

@@ -14,4 +14,9 @@ class TopicObserver
         // 摘要信息
         $topic->excerpt = make_excerpt($topic->content);
     }
+
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
 }
