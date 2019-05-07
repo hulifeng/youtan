@@ -26,7 +26,9 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
-        return view('topics.show', compact('topic'));
+        $recommend_article = $topic->where('category_id', $topic->category->id)->get()->random(3);
+
+        return view('topics.show', compact('topic', 'recommend_article'));
     }
 
     public function create(Topic $topic)
