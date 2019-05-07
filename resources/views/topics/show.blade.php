@@ -42,10 +42,10 @@
                     <div class="blog-detail-content">
                         {!! $topic->content !!}
                     </div>
-                    <!--点赞-->
-                    <div class="blog-detail-likes">
-                        <a href="#"><i class="fa fa-thumbs-up"></i> 点赞（12）</a>
-                    </div>
+                    {{--点赞--}}
+                    {{--<div class="blog-detail-likes">--}}
+                        {{--<a href="#"><i class="fa fa-thumbs-up"></i> 点赞（12）</a>--}}
+                    {{--</div>--}}
                 </div>
                 <!-- 内容结束 -->
                 <div class="clearfix"></div>
@@ -61,7 +61,7 @@
                 <!--留言-->
                 <div class="blog-message">
                     <div class="blog-message-area clearfix">
-                        <div class="message-title">留言</div>
+                        <div class="message-title"><strong>留言</strong></div>
                         @include('shared._error')
                         <form action="{{ route('replies.store') }}" method="post">
                             {{ csrf_field() }}

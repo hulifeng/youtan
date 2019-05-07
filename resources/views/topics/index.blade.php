@@ -52,51 +52,6 @@
             </div>
         </div>
     </div>
-    <div class="blog-site">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <dt>服务商</dt>
-                    <dd>
-                        <img src="/images/tengxunyun.png" alt="腾讯云" title="腾讯云">
-                    </dd>
-                </div>
-                <div class="col-md-2">
-                    <dt>开发宝典</dt>
-                    <dd><a href="#">PHP手册</a></dd>
-                    <dd><a href="#">Laravel手册</a></dd>
-                    <dd><a href="#">Mysql手册</a></dd>
-                </div>
-                <div class="col-md-2">
-                    <dt>学习路线</dt>
-                    <dd><a href="#">Python学习指南</a></dd>
-                    <dd><a href="#">Laravel学习指南</a></dd>
-                    <dd><a href="#">Linux学习指南</a></dd>
-                    <dd><a href="#">Mysql学习指南</a></dd>
-                </div>
-                <div class="col-md-2">
-                    <dt>面试王中王</dt>
-                    <dd><a href="#">PHP面试库</a></dd>
-                    <dd><a href="#">简历模板</a></dd>
-                    <dd><a href="#">Mysql面试宝典</a></dd>
-                    <dd><a href="#">Linux面试宝典</a></dd>
-                </div>
-                <div class="col-md-2">
-                    <dt>关注</dt>
-                    <dd><a href="#">产品技术日志</a></dd>
-                    <dd><a href="#">社区运营日志</a></dd>
-                    <dd><a href="#">市场运营日志</a></dd>
-                    <dd><a href="#">团队日志</a></dd>
-                </div>
-                <div class="col-md-2">
-                    <dt></dt>
-                    <dd>
-                        <img src="/images/qcode.jpg" alt="谢谢关注" title="谢谢关注">
-                    </dd>
-                </div>
-            </div>
-        </div>
-    </div>
 @stop
 
 @section('afterJs')

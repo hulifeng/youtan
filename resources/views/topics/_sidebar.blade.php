@@ -58,6 +58,20 @@
         </div>
     </div>
 </div>
+<div class="blog-board">
+    <div class="board-title">
+        <span class="text">
+            <strong><i class="fa fa-tags"></i> &nbsp;标签</strong>
+        </span>
+    </div>
+    <div class="board-content">
+        <ul class="tags clearfix">
+            @foreach(\App\Models\Tag::all() as $tag)
+                <li class="item"><a href="javascript:;">{{ $tag->name }}</a></li>
+            @endforeach
+        </ul>
+    </div>
+</div>
 <div class="blog-ad">
     <img src="/images/ad-1.png" alt="">
 </div>
@@ -69,9 +83,9 @@
 </div>
 <div class="blog-board">
     <div class="board-title">
-                        <span class="text">
-                            <strong><i class="fa fa-link"></i> &nbsp;友情链接</strong>
-                        </span>
+        <span class="text">
+            <strong><i class="fa fa-link"></i> &nbsp;友情链接</strong>
+        </span>
     </div>
     <div class="board-content">
         <div class="row">

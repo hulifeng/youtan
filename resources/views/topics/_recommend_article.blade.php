@@ -7,7 +7,7 @@
                     <img src="{{ $recommend->cover }}" alt="">
                 </div>
                 <div class="article-data">
-                    <div class="title">{{ $recommend->title }}</div>
+                    <div class="title" title="{{ $recommend->title }}">{{ $recommend->title }}</div>
                     <div class="info">
                         <div class="item float-left"><i class="fa fa-eye"></i> {{ $recommend->view_count }}</div>
                         <div class="item float-left"><i class="fas fa-comment-dots"></i> {{ $recommend->reply_count }}</div>

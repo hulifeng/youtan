@@ -35,23 +35,4 @@
             </div>
         </div>
     </div>
-    <div class="blog-board">
-        <div class="board-title">
-                        <span class="text">
-                            <strong><i class="fa fa-tags"></i> &nbsp;标签</strong>
-                        </span>
-        </div>
-        <div class="board-content">
-            <ul class="tags clearfix">
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-                <li class="item"><a href="javascript:;">Laravel</a></li>
-            </ul>
-        </div>
-    </div>
 </div>

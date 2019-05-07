@@ -16736,20 +16736,6 @@ h6 {
   width: 100%;
 }
 
-#content .blog-detail .blog-detail-likes a {
-  display: block;
-  width: 120px;
-  padding: 8px 15px;
-  margin: 0 auto 20px auto;
-  background-color: #1ab394;
-  color: #fff;
-  text-align: center;
-}
-
-#content .blog-detail .blog-detail-likes a:hover {
-  text-decoration: none;
-}
-
 /* recommend article */
 
 #content .blog-recommend-article {
@@ -16814,8 +16800,7 @@ h6 {
 
 #content .blog-message .blog-message-area .message-title {
   margin-bottom: 10px;
-  font-size: 15px;
-  font-weight: 700;
+  color: #1b1e21;
 }
 
 #content .blog-message .blog-message-area textarea {
@@ -17144,48 +17129,50 @@ h6 {
 
 /* sidebar end */
 
-/* blog-site */
-
-.blog-site {
-  background-color: #fff;
-  padding: 40px 0;
-  margin-top: 40px;
-}
-
-.blog-site dt {
-  font-size: 15px;
-  margin-bottom: 20px;
-  color: #1c1f21;
-}
-
-.blog-site dd {
-  margin-bottom: 10px;
-}
-
-.blog-site dd a {
-  color: #9199a1;
-}
-
-.blog-site dd a:hover {
-  color: #1ab394;
-}
-
-/* blog-site end */
-
 /* footer */
 
 #footer {
-  height: 40px;
-  line-height: 40px;
-  border-top: 1px solid #e7eaec;
+  height: 0;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #fff;
+  /* blog-site */
+  /* blog-site end */
 }
 
-.domain {
+#footer .blog-site {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+#footer .blog-site dt {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #1c1f21;
+}
+
+#footer .blog-site dd {
+  margin-bottom: 10px;
+}
+
+#footer .blog-site dd a {
+  color: #9199a1;
+}
+
+#footer .blog-site dd a:hover {
+  color: #1ab394;
+}
+
+#footer .blog-copyright {
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border: 1px solid #e7eaec;
+}
+
+#footer .blog-copyright .domain {
   color: #1c1f21;
 }
 
