@@ -12,6 +12,9 @@ class CategoriesController extends Controller
     {
         $topics = $topic->where('category_id', $category->id)->withOrder($request->order)->paginate();
 
-        return view('topics.index', compact('topics', 'category'));
+        // 推荐文章
+        $recommend_article = Topic::orderBy('view_count', 'desc')->limit(5)->get();
+
+        return view('topics.index', compact('topics', 'category', 'recommend_article'));
     }
 }

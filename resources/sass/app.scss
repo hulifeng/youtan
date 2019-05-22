@@ -306,6 +306,9 @@ body {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          a {
+            color: #9199a1;
+          }
         }
         .info {
           .item {
