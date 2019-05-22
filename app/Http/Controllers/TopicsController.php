@@ -19,13 +19,21 @@ class TopicsController extends Controller
 
     public function index(Request $request)
     {
+        // 所有文章信息
         $topics = Topic::withOrder($request->order)->paginate();
 
-        return view('topics.index', compact('topics', 'categories'));
+        // 推荐文章
+        $recommend_article = Topic::orderBy('view_count', 'desc')->limit(5)->get();
+
+        return view('topics.index', compact('topics', 'categories', 'recommend_article'));
     }
 
     public function show(Topic $topic)
     {
+        // 增加阅读数量
+        $topic->increment('view_count');
+
+        // 推荐文章
         $recommend_article = $topic->where('category_id', $topic->category->id)->get()->random(3);
 
         return view('topics.show', compact('topic', 'recommend_article'));
@@ -33,6 +41,7 @@ class TopicsController extends Controller
 
     public function create(Topic $topic)
     {
+        // 获取所有分类
         $categories = Category::all();
 
         return view('topics.create_and_edit', compact('categories', 'topic'));

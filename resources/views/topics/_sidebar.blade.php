@@ -21,41 +21,24 @@
                             </span>
     </div>
     <div class="board-content">
-        <div class="suggested-article">
-            <div class="sign bg-pink">1</div>
-            <div class="info">
-                <a href="javascript:;" class="title">Git服务器利用hookGit服务器利用hook</a>
-                <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;789</div>
+        @foreach($recommend_article as $k => $article)
+            @php
+                if (($k + 1) == 1) {
+                    $color = 'bg-pink';
+                } else if (in_array(($k + 1), [2, 3])) {
+                    $color = 'bg-yellow';
+                } else if (in_array(($k + 1), [4, 5])) {
+                    $color = 'bg-blue';
+                }
+            @endphp
+            <div class="suggested-article">
+                <div class="sign {{ $color }}">{{ $k + 1 }}</div>
+                <div class="info">
+                    <a href="{{ route('topics.show', $article->id) }}" class="title" title="{{ $article->title }}">{{ $article->title }}</a>
+                    <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;{{ $article->view_count }}</div>
+                </div>
             </div>
-        </div>
-        <div class="suggested-article">
-            <div class="sign bg-yellow">2</div>
-            <div class="info">
-                <a href="javascript:;" class="title">Git服务器利用hookGit服务器利用hook</a>
-                <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;789</div>
-            </div>
-        </div>
-        <div class="suggested-article">
-            <div class="sign bg-yellow">3</div>
-            <div class="info">
-                <a href="javascript:;" class="title">Git服务器利用hookGit服务器利用hook</a>
-                <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;789</div>
-            </div>
-        </div>
-        <div class="suggested-article">
-            <div class="sign bg-blue">4</div>
-            <div class="info">
-                <a href="javascript:;" class="title">Git服务器利用hookGit服务器利用hook</a>
-                <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;789</div>
-            </div>
-        </div>
-        <div class="suggested-article">
-            <div class="sign bg-blue">5</div>
-            <div class="info">
-                <a href="javascript:;" class="title">Git服务器利用hookGit服务器利用hook</a>
-                <div class="hot float-right"><i class="fas fa-thermometer-half  bg-pink-c"></i> &nbsp;789</div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="blog-board">

@@ -12,15 +12,15 @@
             <div class="row text-center user-data">
                 <div class="col-md-4 col-xs-4 data-item">
                     <i class="fa fa-bars fa-1-5x"></i>
-                    <p><strong>169 帖子</strong></p>
+                    <p><strong>{{ $topic->user->topics->count() }} 帖子</strong></p>
                 </div>
                 <div class="col-md-4 col-xs-4 data-item">
                     <i class="fa fa-users fa-1-5x"></i>
-                    <p><strong>28 好友</strong></p>
+                    <p><strong>0 好友</strong></p>
                 </div>
                 <div class="col-md-4 col-xs-4 data-item">
                     <i class="fa fa-heart fa-1-5x"></i>
-                    <p><strong>240 关注</strong></p>
+                    <p><strong>0 关注</strong></p>
                 </div>
             </div>
             <div class="user-button">
