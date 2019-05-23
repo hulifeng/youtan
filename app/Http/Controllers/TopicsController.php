@@ -92,6 +92,6 @@ class TopicsController extends Controller
 
     public function uploadImage()
     {
-        dd(11);
+        dd(22);
     }
 }
